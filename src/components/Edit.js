@@ -16,7 +16,7 @@ const Edit = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try {
-          const res=await  axios.put(`http://localhost:5000/api/update/${id}`,{name,image,ingredients,time,category})
+          const res=await  axios.put(`https://backend23-sn7a.onrender.com/api/update/${id}`,{name,image,ingredients,time,category})
           if( res && res.data.success){
             toast.success(res.data.message)
             navigate('/')
