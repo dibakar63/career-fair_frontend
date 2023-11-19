@@ -25,7 +25,7 @@ const AddRecipe = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try {
-          const res=await  axios.post('http://localhost:5000/api/add',{name,image,ingredients,time,category})
+          const res=await  axios.post('https://backend23-sn7a.onrender.com/api/add',{name,image,ingredients,time,category})
           if( res && res.data.success){
             toast.success(res.data.message)
             navigate('/')
