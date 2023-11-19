@@ -12,7 +12,7 @@ const Users = () => {
 
    // const id=useParams().id;
     const fetchHandler=async(search)=>{
-        return  await axios.get(`http://localhost:5000/api/recipe`)
+        return  await axios.get(`https://backend23-sn7a.onrender.com/api/recipe`)
          .then((res)=>res.data);
          
      
@@ -35,7 +35,7 @@ const Users = () => {
         setRecipes(filterData)
       }
        const deleteHandler=async(id)=>{
-        const res= await axios.delete(`http://localhost:5000/api/${id}`)
+        const res= await axios.delete(`https://backend23-sn7a.onrender.com/api/${id}`)
         try {
           if(res && res.data.success){
             alert('Data deleted sucessfully')
